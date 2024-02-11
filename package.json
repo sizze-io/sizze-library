@@ -36,7 +36,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "sizze-library",
+  "name": "@sizze/sizze-library",
   "author": "sizze",
   "module": "dist/sizze-library.esm.js",
   "size-limit": [
