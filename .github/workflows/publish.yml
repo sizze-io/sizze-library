@@ -43,6 +43,7 @@ jobs:
       with:
         node-version: 20.11
         cache: 'npm'
+        access: publick
     - run: npm install
     - run: npm ci
     - run: npm run semantic-release
