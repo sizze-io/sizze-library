@@ -82,8 +82,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@webflow/webflow-cli": "^1.6.5"
   }
 }
