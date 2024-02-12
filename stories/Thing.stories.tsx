@@ -1,17 +1,19 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Thing, Props } from '../src';
+import { Sznavbar } from '../src';
 
 const meta: Meta = {
   title: 'Welcome',
-  component: Thing,
-  argTypes: {
-    children: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  component: Sznavbar,
+  // argTypes можно использовать для управления аргументами, если ваш компонент их принимает.
+  // Поскольку в вашем случае пропсов нет, этот раздел можно опустить или закомментировать.
+  // argTypes: {
+  //   children: {
+  //     control: {
+  //       type: 'text',
+  //     },
+  //   },
+  // },
   parameters: {
     controls: { expanded: true },
   },
@@ -19,10 +21,9 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = args => <Thing {...args} />;
+// Для компонента без пропсов Template можно просто рендерить Sznavbar без передачи args.
+const Template: Story = () => <Sznavbar />;
 
-// By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
-// https://storybook.js.org/docs/react/workflows/unit-testing
 export const Default = Template.bind({});
-
-Default.args = {};
+// Поскольку нет пропсов, Default.args можно опустить или закомментировать.
+// Default.args = {};
