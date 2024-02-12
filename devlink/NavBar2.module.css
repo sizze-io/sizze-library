@@ -1,0 +1,100 @@
+.navbar-1 {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid #eaecf0;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.spaceforiphone {
+  height: 3.2rem;
+}
+
+.secondlinenavbar {
+  height: 3rem;
+}
+
+.gridnavbar {
+  display: grid;
+  height: 100%;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+}
+
+.lefticon {
+  display: flex;
+  padding: 12px 8px;
+  align-items: center;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+
+  color: #5e6ad2;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.wrappericon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.wrappericon.small {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.text-block {
+  font-size: 0.9rem;
+}
+
+.centertitle {
+  display: flex;
+  padding-right: 12px;
+  padding-left: 12px;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.righticon {
+  display: flex;
+  padding-right: 12px;
+  padding-left: 12px;
+  justify-content: flex-end;
+  align-items: center;
+
+  color: #5e6ad2;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#w-node-_51f16e2c-3b5e-b3cc-e769-f23d8fc4f5bc-8fc4f5b8 {
+  grid-column-start: span 1;
+  grid-column-end: span 1;
+  grid-row-start: span 1;
+  grid-row-end: span 1;
+}
+#w-node-_51f16e2c-3b5e-b3cc-e769-f23d8fc4f5c0-8fc4f5b8 {
+  grid-column-start: span 1;
+  grid-column-end: span 1;
+  grid-row-start: span 1;
+  grid-row-end: span 1;
+}
+#w-node-_51f16e2c-3b5e-b3cc-e769-f23d8fc4f5c3-8fc4f5b8 {
+  grid-column-start: span 1;
+  grid-column-end: span 1;
+  grid-row-start: span 1;
+  grid-row-end: span 1;
+}
