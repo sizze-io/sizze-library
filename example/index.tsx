@@ -1,14 +1,13 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
-import { Sznavbar } from '../.';
+//import { Thing } from '../.';
+import  Sznavbar  from '../src/Sznavbar';
 
 const App = () => {
   return (
     <div>
-      <Thing />
-      <Sznavbar text="text"/>
+      <Sznavbar text={"text"}/>
     </div>
   );
 };

@@ -1,1 +1,1 @@
-export * from './SZNavBar';
+export * from './Sznavbar';
