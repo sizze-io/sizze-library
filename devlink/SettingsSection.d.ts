@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function ButtonPrimary(props: {
+declare function SettingsSection(props: {
   as?: React.ElementType;
-  text?: React.ReactNode;
+  settingsSlot?: Types.Devlink.Slot;
   theme?: Types.Builtin.Text;
-  buttonClick?: Types.Devlink.RuntimeProps;
+  styleProps?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

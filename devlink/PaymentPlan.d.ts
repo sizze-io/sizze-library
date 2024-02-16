@@ -6,4 +6,10 @@ declare function PaymentPlan(props: {
   period?: React.ReactNode;
   description?: React.ReactNode;
   price?: React.ReactNode;
+  theme?: Types.Builtin.Text;
+  styleProps?: Types.Devlink.RuntimeProps;
+  labelStyle?: Types.Devlink.RuntimeProps;
+  descriptionStyle?: Types.Devlink.RuntimeProps;
+  priceStyle?: Types.Devlink.RuntimeProps;
+  iconSlot?: Types.Devlink.Slot;
 }): React.JSX.Element;

@@ -1,9 +1,8 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function ButtonPrimary(props: {
+declare function Provider(props: {
   as?: React.ElementType;
-  text?: React.ReactNode;
   theme?: Types.Builtin.Text;
-  buttonClick?: Types.Devlink.RuntimeProps;
+  mainSlot?: Types.Devlink.Slot;
 }): React.JSX.Element;

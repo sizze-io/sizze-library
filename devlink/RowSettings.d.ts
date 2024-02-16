@@ -6,4 +6,7 @@ declare function RowSettings(props: {
   visibilityIconRight?: Types.Visibility.VisibilityConditions;
   visibilityIconLeft?: Types.Visibility.VisibilityConditions;
   text?: React.ReactNode;
+  iconSlot?: Types.Devlink.Slot;
+  settingsItemClick?: Types.Devlink.RuntimeProps;
+  theme?: Types.Builtin.Text;
 }): React.JSX.Element;

@@ -6,4 +6,6 @@ declare function NavBar1(props: {
   visibilityIcon?: Types.Visibility.VisibilityConditions;
   text?: React.ReactNode;
   icon?: Types.Devlink.Slot;
+  style?: Types.Devlink.RuntimeProps;
+  theme?: Types.Builtin.Text;
 }): React.JSX.Element;

@@ -1,9 +1,10 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function ButtonPrimary(props: {
+declare function TabItem(props: {
   as?: React.ElementType;
-  text?: React.ReactNode;
+  tabText?: React.ReactNode;
+  tabIcon?: Types.Devlink.Slot;
+  tabClick?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
-  buttonClick?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

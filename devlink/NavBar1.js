@@ -7,9 +7,11 @@ export function NavBar1({
   visibilityIcon = true,
   text = "Home page",
   icon,
+  style = {},
+  theme,
 }) {
   return (
-    <_Component className="navbar-1" tag="div">
+    <_Component className="navbar-1" tag="div" data-theme={theme} {...style}>
       <_Builtin.Block className="spaceforiphone" tag="div" />
       <_Builtin.Block className="thirdlinenavbar" tag="div">
         <_Builtin.Block className="headernavbar" tag="div">

@@ -7,21 +7,32 @@ export function PaymentPlan({
   period = "One-time",
   description = "Opt for a one-off payment plan ",
   price = "$200 / one-time",
+  theme,
+  styleProps = {},
+  labelStyle = {},
+  descriptionStyle = {},
+  priceStyle = {},
+  iconSlot,
 }) {
   return (
-    <_Component className="paymentplan" tag="div">
+    <_Component
+      className="paymentplan"
+      tag="div"
+      data-theme={theme}
+      {...styleProps}
+    >
       <_Builtin.Block className="_1row" tag="div">
-        <_Builtin.Block className="pricetag" tag="div">
+        <_Builtin.Block className="pricetag" tag="div" {...labelStyle}>
           <_Builtin.Block tag="div">{period}</_Builtin.Block>
         </_Builtin.Block>
-        <Checkbox />
+        <_Builtin.Block tag="div">{iconSlot ?? <Checkbox />}</_Builtin.Block>
       </_Builtin.Block>
       <_Builtin.Block className="div-block-14" tag="div">
-        <_Builtin.Block className="textsize4" tag="div">
+        <_Builtin.Block className="textsize4" tag="div" {...descriptionStyle}>
           {description}
         </_Builtin.Block>
       </_Builtin.Block>
-      <_Builtin.Block className="div-block-14" tag="div">
+      <_Builtin.Block className="div-block-14" tag="div" {...priceStyle}>
         <_Builtin.Block className="textsize3" tag="div">
           {price}
         </_Builtin.Block>

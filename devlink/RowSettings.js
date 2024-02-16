@@ -7,14 +7,24 @@ export function RowSettings({
   visibilityIconRight = true,
   visibilityIconLeft = true,
   text = "Profile",
+  iconSlot,
+  settingsItemClick = {},
+  theme,
 }) {
   return (
-    <_Component className="settingswrapperrow" tag="div">
+    <_Component
+      className="settingswrapperrow"
+      tag="div"
+      data-theme={theme}
+      {...settingsItemClick}
+    >
       {visibilityIconLeft ? (
         <_Builtin.Block tag="div">
-          <_Builtin.Block className="wrappericon small" tag="div">
-            <DefaultIcon />
-          </_Builtin.Block>
+          {iconSlot ?? (
+            <_Builtin.Block className="wrappericon small" tag="div">
+              <DefaultIcon />
+            </_Builtin.Block>
+          )}
         </_Builtin.Block>
       ) : null}
       <_Builtin.Block

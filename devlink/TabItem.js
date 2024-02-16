@@ -2,24 +2,26 @@ import React from "react";
 import * as _Builtin from "./_Builtin";
 import { DefaultIcon } from "./DefaultIcon";
 
-export function ButtonSecondary({
+export function TabItem({
   as: _Component = _Builtin.Block,
-  text = "Read",
+  tabText = "Tab 1",
+  tabIcon,
+  tabClick = {},
   theme,
-  clickProps = {},
-  icon,
 }) {
   return (
     <_Component
-      className="buttonsecondary"
+      className="tab color"
       tag="div"
       data-theme={theme}
-      {...clickProps}
+      {...tabClick}
     >
       <_Builtin.Block className="wrappericon" tag="div">
-        {icon ?? <DefaultIcon />}
+        {tabIcon ?? <DefaultIcon />}
       </_Builtin.Block>
-      <_Builtin.Block tag="div">{text}</_Builtin.Block>
+      <_Builtin.Block className="text-block-5" tag="div">
+        {tabText}
+      </_Builtin.Block>
     </_Component>
   );
 }
