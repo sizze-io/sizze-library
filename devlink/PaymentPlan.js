@@ -23,9 +23,13 @@ export function PaymentPlan({
     >
       <_Builtin.Block className="_1row" tag="div">
         <_Builtin.Block className="pricetag" tag="div" {...labelStyle}>
-          <_Builtin.Block tag="div">{period}</_Builtin.Block>
+          <_Builtin.Block className="text-block-8" tag="div">
+            {period}
+          </_Builtin.Block>
         </_Builtin.Block>
-        <_Builtin.Block tag="div">{iconSlot ?? <Checkbox />}</_Builtin.Block>
+        <_Builtin.Block className="div-block-18" tag="div">
+          {iconSlot ?? <Checkbox />}
+        </_Builtin.Block>
       </_Builtin.Block>
       <_Builtin.Block className="div-block-14" tag="div">
         <_Builtin.Block className="textsize4" tag="div" {...descriptionStyle}>

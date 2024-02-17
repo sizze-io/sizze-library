@@ -38,6 +38,7 @@ export function PaywallComponent({
               price="$120 / mo"
             />
             <PaymentPlan />
+            <PaymentPlan />
           </>
         )}
       </_Builtin.Block>

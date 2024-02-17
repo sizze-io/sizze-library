@@ -19,12 +19,8 @@ export function RowSettings({
       {...settingsItemClick}
     >
       {visibilityIconLeft ? (
-        <_Builtin.Block tag="div">
-          {iconSlot ?? (
-            <_Builtin.Block className="wrappericon small" tag="div">
-              <DefaultIcon />
-            </_Builtin.Block>
-          )}
+        <_Builtin.Block className="wrappericon small" tag="div">
+          {iconSlot ?? <DefaultIcon />}
         </_Builtin.Block>
       ) : null}
       <_Builtin.Block

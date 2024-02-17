@@ -14,7 +14,9 @@ export function ButtonPrimary({
       data-theme={theme}
       {...buttonClick}
     >
-      <_Builtin.Block tag="div">{text}</_Builtin.Block>
+      <_Builtin.Block className="text-block-9" tag="div">
+        {text}
+      </_Builtin.Block>
     </_Component>
   );
 }
