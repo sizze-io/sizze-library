@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function Checkbox(props: {
+declare function StarIcon(props: {
   as?: React.ElementType;
-  iconProps?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
+  iconProps?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

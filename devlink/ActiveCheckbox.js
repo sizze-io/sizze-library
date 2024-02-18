@@ -1,14 +1,14 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
 
-export function Checkbox({
+export function ActiveCheckbox({
   as: _Component = _Builtin.Block,
-  iconProps = {},
   theme,
+  iconProps = {},
 }) {
   return (
     <_Component
-      className="checkbox div-block-19"
+      className="checkbox active"
       tag="div"
       data-theme={theme}
       {...iconProps}

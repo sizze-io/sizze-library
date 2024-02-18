@@ -11,3 +11,4 @@ export * from './SzSettings/SettingsSection';
 export * from './SzDetail/Detail';
 export * from './SzPaywall/Paywall';
 export * from './SzPaywall/PaywallCard';
+export * from './SzIcons/Icons';

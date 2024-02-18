@@ -11,7 +11,7 @@ export interface ButtonProps {
   buttonIcon?: React.ReactNode;
 }
 
-export function SzPrimaryButtom({
+export function SzPrimaryButton({
   text,
   style,
   theme,
@@ -27,12 +27,12 @@ export function SzPrimaryButtom({
   );
 }
 
-export function SzSecondaryButtom({
+export function SzSecondaryButton({
   text,
   style,
   theme,
   buttonClick,
-  buttonIcon
+  buttonIcon,
 }: ButtonProps) {
   const { themeDefault } = useTheme();
   return (
@@ -44,4 +44,3 @@ export function SzSecondaryButtom({
     />
   );
 }
-

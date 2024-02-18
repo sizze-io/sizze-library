@@ -2791,6 +2791,10 @@ textarea.w-select {
   border-radius: 20px;
 }
 
+.checkbox.active {
+  background-color: var(--gray900);
+}
+
 .paymentplan {
   display: flex;
   padding: 12px;
@@ -5662,6 +5666,11 @@ textarea.w-select {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.div-block-19 {
+  border-color: var(--gray500);
+  background-color: var(--indigo);
 }
 
 #w-node-_51f16e2c-3b5e-b3cc-e769-f23d8fc4f5bc-8fc4f5b8 {
