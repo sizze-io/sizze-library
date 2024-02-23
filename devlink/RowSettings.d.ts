@@ -9,4 +9,5 @@ declare function RowSettings(props: {
   iconSlot?: Types.Devlink.Slot;
   settingsItemClick?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
+  rightIcon?: Types.Devlink.Slot;
 }): React.JSX.Element;

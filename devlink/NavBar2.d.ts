@@ -11,4 +11,5 @@ declare function NavBar2(props: {
   rightClick?: Types.Devlink.RuntimeProps;
   style?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
+  backSlot?: Types.Devlink.Slot;
 }): React.JSX.Element;

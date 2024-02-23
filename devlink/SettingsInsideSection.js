@@ -1,7 +1,7 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
 import { RowSettings } from "./RowSettings";
-import { StarIcon } from "./StarIcon";
+import { IconStars } from "./IconStars";
 import { PlanetIcon } from "./PlanetIcon";
 import { AlertIcon } from "./AlertIcon";
 
@@ -12,6 +12,7 @@ export function SettingsInsideSection({
   theme,
   styleProps = {},
   titleSettings = {},
+  textBlockVisibility = true,
 }) {
   return (
     <_Component
@@ -20,16 +21,18 @@ export function SettingsInsideSection({
       data-theme={theme}
       {...styleProps}
     >
-      <_Builtin.Block tag="div" {...titleSettings}>
-        {title}
-      </_Builtin.Block>
+      {textBlockVisibility ? (
+        <_Builtin.Block tag="div" {...titleSettings}>
+          {title}
+        </_Builtin.Block>
+      ) : null}
       <_Builtin.Block className="rowsettings" tag="div">
         {settingsItemSlot ?? (
           <>
             <RowSettings visibilityIconLeft={true} visibilityIconRight={true} />
             <_Builtin.Block className="settingswrapperrow" tag="div">
               <_Builtin.Block className="wrappericon" tag="div">
-                <StarIcon />
+                <IconStars />
               </_Builtin.Block>
               <_Builtin.Block
                 className="text-block-6"

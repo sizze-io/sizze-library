@@ -1,6 +1,5 @@
 import React from 'react';
 import { DefaultIcon } from '../../devlink/DefaultIcon';
-import { StarIcon } from '../../devlink/StarIcon';
 import { PlanetIcon } from '../../devlink/PlanetIcon';
 import { AlertIcon } from '../../devlink/AlertIcon';
 import { HelpIcon } from '../../devlink/HelpIcon';
@@ -8,10 +7,12 @@ import { FeedbackIcon } from '../../devlink/FeedbackIcon';
 import { DeleteAccountIcon } from '../../devlink/DeleteAccountIcon';
 import { Checkbox } from '../../devlink/Checkbox';
 import { LogoutIcon } from '../../devlink/LogoutIcon';
+import { IconLeft } from '../../devlink/IconLeft';
+import { IconRight } from '../../devlink/IconRight';
 import { useTheme } from '../SzProvider';
 
 export interface IconProps {
-  color?: string;
+  style?: React.CSSProperties;
   theme?: string;
 }
 
@@ -22,82 +23,102 @@ export interface CheckboxProps {
   activeColor?: string;
 }
 
-export function SzDefaultIcon({ color, theme }: IconProps) {
+export function SzDefaultIcon({ style, theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <DefaultIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style }}
     />
   );
 }
 
-export function SzStarIcon({ color, theme }: IconProps) {
+export function SzLeftIcon({ style, theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
-    <StarIcon
+    <IconLeft
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style }}
     />
   );
 }
 
-export function SzPlanetIcon({ color, theme }: IconProps) {
+export function SzRightIcon({ style, theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
-    <PlanetIcon
+    <IconRight
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style }}
     />
   );
 }
 
-export function SzAlertIcon({ color, theme }: IconProps) {
+export function SzStarIcon({ style, theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <AlertIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style }}
     />
   );
 }
 
-export function SzHelpIcon({ color, theme }: IconProps) {
+export function SzPlanetIcon({ style, theme }: IconProps) {
+  const { themeDefault } = useTheme();
+  return (
+    <PlanetIcon
+      theme={theme ? theme : themeDefault}
+      iconProps={{ style: style }}
+    />
+  );
+}
+
+export function SzAlertIcon({ style, theme }: IconProps) {
+  const { themeDefault } = useTheme();
+  return (
+    <AlertIcon
+      theme={theme ? theme : themeDefault}
+      iconProps={{ style: style }}
+    />
+  );
+}
+
+export function SzHelpIcon({ style, theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <HelpIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style }}
     />
   );
 }
 
-export function SzFeedbackIcon({ color, theme }: IconProps) {
+export function SzFeedbackIcon({ style, theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <FeedbackIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style }}
     />
   );
 }
 
-export function SzDeleteAccountIcon({ color, theme }: IconProps) {
+export function SzDeleteAccountIcon({ style , theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <DeleteAccountIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style  }}
     />
   );
 }
 
-export function SzLogoutIcon({ color, theme }: IconProps) {
+export function SzLogoutIcon({ style , theme }: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <LogoutIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: { color: color } }}
+      iconProps={{ style: style  }}
     />
   );
 }

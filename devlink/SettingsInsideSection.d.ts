@@ -8,4 +8,5 @@ declare function SettingsInsideSection(props: {
   theme?: Types.Builtin.Text;
   styleProps?: Types.Devlink.RuntimeProps;
   titleSettings?: Types.Devlink.RuntimeProps;
+  textBlockVisibility?: Types.Visibility.VisibilityConditions;
 }): React.JSX.Element;

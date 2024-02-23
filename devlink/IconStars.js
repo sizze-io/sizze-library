@@ -1,7 +1,7 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
 
-export function StarIcon({
+export function IconStars({
   as: _Component = _Builtin.HtmlEmbed,
   theme,
   iconProps = {},

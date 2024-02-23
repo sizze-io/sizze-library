@@ -12,3 +12,8 @@ export * from './SzDetail/Detail';
 export * from './SzPaywall/Paywall';
 export * from './SzPaywall/PaywallCard';
 export * from './SzIcons/Icons';
+export * from './SzImage/Image';
+export * from './SzWrapper/SzWrapper';
+export * from './SzGalery/SzCardWithText';
+export * from './SzGalery/SzGalery';
+export * from './SzGalery/SzImageCard';

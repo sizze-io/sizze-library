@@ -1,6 +1,6 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
-import { DefaultIcon } from "./DefaultIcon";
+import { BackButton } from "./BackButton";
 
 export function NavBar2({
   as: _Component = _Builtin.Block,
@@ -12,6 +12,7 @@ export function NavBar2({
   rightClick = {},
   style = {},
   theme,
+  backSlot,
 }) {
   return (
     <_Component className="navbar-1" tag="div" data-theme={theme} {...style}>
@@ -24,12 +25,7 @@ export function NavBar2({
             tag="div"
             {...backClick}
           >
-            <_Builtin.Block className="wrappericon" tag="div">
-              {backIcon ?? <DefaultIcon />}
-            </_Builtin.Block>
-            <_Builtin.Block className="text-block" tag="div">
-              {leftText}
-            </_Builtin.Block>
+            {backSlot ?? <BackButton />}
           </_Builtin.Block>
           <_Builtin.Block
             className="centertitle"

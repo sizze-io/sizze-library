@@ -1,8 +1,9 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function StarIcon(props: {
+declare function BackButton(props: {
   as?: React.ElementType;
+  styleProps?: Types.Devlink.RuntimeProps;
+  iconSlot?: Types.Devlink.Slot;
   theme?: Types.Builtin.Text;
-  iconProps?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

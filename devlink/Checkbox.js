@@ -12,6 +12,8 @@ export function Checkbox({
       tag="div"
       data-theme={theme}
       {...iconProps}
-    />
+    >
+      <_Builtin.Block className="div-block-20" tag="div" />
+    </_Component>
   );
 }

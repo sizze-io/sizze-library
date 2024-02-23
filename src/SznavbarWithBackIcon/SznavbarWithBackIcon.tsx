@@ -28,7 +28,7 @@ export function SzNavWithAction({
     <NavBar2
       mainText={mainText}
       theme={theme ? theme : themeDefault}
-      backIcon={backIcon}
+      backSlot={backIcon}
       rightText={rightText}
       leftText={leftText}
       backClick={{ onClick: backClick }}

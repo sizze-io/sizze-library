@@ -6,6 +6,7 @@ import React, {
   ReactNode,
 } from 'react';
 import { verifyLicense } from './lib/checkLicense';
+import { WrapperNoLicences } from '../devlink/WrapperNoLicences';
 
 interface ThemeContextType {
   themeDefault: string;
@@ -54,7 +55,13 @@ export const SzProvider = ({
   }, [licenseKey]);
 
   if (!isLicensed) {
-    return <div>Licence Expired</div>;
+    return (
+      <WrapperNoLicences
+        actionClick={{
+          onClick: () => (window.location.href = 'https://sizze.io'),
+        }}
+      />
+    );
   }
 
   return (

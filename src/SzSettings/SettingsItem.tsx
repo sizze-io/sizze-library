@@ -6,22 +6,25 @@ export interface SettingsItemProps {
   title: string;
   style?: React.CSSProperties;
   theme?: string;
-  icon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
   itemClick?: (...args: any[]) => void;
 }
 
 export function SzSettingsItem({
   title,
-  icon,
+  leftIcon,
   style,
   theme,
   itemClick,
+  rightIcon,
 }: SettingsItemProps) {
   const { themeDefault } = useTheme();
   return (
     <RowSettings
+      rightIcon={rightIcon}
       text={title}
-      iconSlot={icon}
+      iconSlot={leftIcon}
       settingsItemClick={{ style: style, onClick: itemClick }}
       theme={theme ? theme : themeDefault}
     />
