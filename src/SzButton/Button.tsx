@@ -41,13 +41,20 @@ export function SzSecondaryButton({
   text,
   style,
   theme,
-  buttonClick,
+  click,
+  onHover,
+  leaveHover,
   buttonIcon,
 }: ButtonProps) {
   const { themeDefault } = useTheme();
   return (
     <ButtonSecondary
-      clickProps={{ style: style, onClick: buttonClick }}
+      clickProps={{
+        style: style,
+        onClick: click,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
       theme={theme ? theme : themeDefault}
       text={text}
       icon={buttonIcon}
@@ -58,13 +65,20 @@ export function SzSecondaryButton({
 export function SzBackButton({
   style,
   theme,
-  buttonClick,
+  click,
   buttonIcon,
+  onHover,
+  leaveHover,
 }: ButtonProps) {
   const { themeDefault } = useTheme();
   return (
     <BackButton
-      styleProps={{ style: style, onClick: buttonClick }}
+      styleProps={{
+        style: style,
+        onClick: click,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
       theme={theme ? theme : themeDefault}
       iconSlot={buttonIcon}
     />
