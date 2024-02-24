@@ -9,6 +9,8 @@ export interface SettingsItemProps {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   itemClick?: (...args: any[]) => void;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
 }
 
 export function SzSettingsItem({
@@ -18,6 +20,8 @@ export function SzSettingsItem({
   theme,
   itemClick,
   rightIcon,
+  onHover,
+  leaveHover,
 }: SettingsItemProps) {
   const { themeDefault } = useTheme();
   return (
@@ -25,7 +29,12 @@ export function SzSettingsItem({
       rightIcon={rightIcon}
       text={title}
       iconSlot={leftIcon}
-      settingsItemClick={{ style: style, onClick: itemClick }}
+      settingsItemClick={{
+        style: style,
+        onClick: itemClick,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
       theme={theme ? theme : themeDefault}
     />
   );

@@ -8,6 +8,8 @@ export interface SettingsSectionProps {
   style?: React.CSSProperties;
   theme?: string;
   slot?: React.ReactNode;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
 }
 
 export function SzSettingsSection({
@@ -16,13 +18,19 @@ export function SzSettingsSection({
   slot,
   style,
   theme,
+  onHover,
+  leaveHover,
 }: SettingsSectionProps) {
   const { themeDefault } = useTheme();
   return (
     <SettingsInsideSection
       title={title}
       settingsItemSlot={slot}
-      styleProps={{ style: style }}
+      styleProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
       theme={theme ? theme : themeDefault}
       titleSettings={{ style: titleStyle }}
     />
