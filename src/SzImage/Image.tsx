@@ -9,6 +9,7 @@ export interface ImageProps {
   url?: string;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
 }
 
 export function SzImage({
@@ -18,6 +19,7 @@ export function SzImage({
   url,
   onHover,
   leaveHover,
+  click,
 }: ImageProps) {
   const { themeDefault } = useTheme();
   return (
@@ -26,6 +28,7 @@ export function SzImage({
         style: generalStyle,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,
+        onClick: click,
       }}
       theme={theme ? theme : themeDefault}
       imageStyle={{ style: imageStyle }}

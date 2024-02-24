@@ -12,6 +12,7 @@ export interface WrapperProps {
   subtitleStyle?: React.CSSProperties;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
 }
 
 export function SzWrapper({
@@ -24,6 +25,7 @@ export function SzWrapper({
   subtitleStyle,
   onHover,
   leaveHover,
+  click,
 }: WrapperProps) {
   const { themeDefault } = useTheme();
   return (
@@ -32,6 +34,7 @@ export function SzWrapper({
         style: style,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,
+        onClick: click,
       }}
       theme={theme ? theme : themeDefault}
       buttonSlot={button}

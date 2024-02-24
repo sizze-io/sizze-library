@@ -8,6 +8,7 @@ export interface SettingsProps {
   settingsSlot?: React.ReactNode;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
 }
 
 export function SzSettings({
@@ -16,6 +17,7 @@ export function SzSettings({
   theme,
   onHover,
   leaveHover,
+  click
 }: SettingsProps) {
   const { themeDefault } = useTheme();
   return (
@@ -24,6 +26,7 @@ export function SzSettings({
         style: style,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,
+        onClick: click,
       }}
       theme={theme ? theme : themeDefault}
       settingsSlot={settingsSlot}

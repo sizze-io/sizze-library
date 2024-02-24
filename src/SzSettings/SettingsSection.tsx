@@ -10,6 +10,7 @@ export interface SettingsSectionProps {
   slot?: React.ReactNode;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
 }
 
 export function SzSettingsSection({
@@ -20,6 +21,7 @@ export function SzSettingsSection({
   theme,
   onHover,
   leaveHover,
+  click,
 }: SettingsSectionProps) {
   const { themeDefault } = useTheme();
   return (
@@ -30,6 +32,7 @@ export function SzSettingsSection({
         style: style,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,
+        onClick: click,
       }}
       theme={theme ? theme : themeDefault}
       titleSettings={{ style: titleStyle }}

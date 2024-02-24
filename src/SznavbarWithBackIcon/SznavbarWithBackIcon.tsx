@@ -11,6 +11,7 @@ export interface SzNavWithActionProps {
   rightClick?: (...args: any[]) => void;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
   style?: React.CSSProperties;
   theme?: string;
 }
@@ -26,6 +27,7 @@ export function SzNavWithAction({
   leaveHover,
   style,
   theme,
+  click,
 }: SzNavWithActionProps) {
   const { themeDefault } = useTheme();
   return (
@@ -37,7 +39,12 @@ export function SzNavWithAction({
       leftText={leftText}
       backClick={{ onClick: backClick }}
       rightClick={{ onClick: rightClick }}
-      style={{ style: style, onMouseEnter: onHover, onMouseLeave: leaveHover }}
+      style={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
