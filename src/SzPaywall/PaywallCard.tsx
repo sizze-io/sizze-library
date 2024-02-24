@@ -11,8 +11,10 @@ export interface PaywallCardProps {
   labelStyle?: React.CSSProperties;
   descriptionStyle?: React.CSSProperties;
   priceStyle?: React.CSSProperties;
-  itemClick?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
   icon?: React.ReactNode;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
 }
 
 export function SzPaywallCard({
@@ -25,12 +27,19 @@ export function SzPaywallCard({
   descriptionStyle,
   priceStyle,
   icon,
-  itemClick,
+  click,
+  onHover,
+  leaveHover,
 }: PaywallCardProps) {
   const { themeDefault } = useTheme();
   return (
     <PaymentPlan
-      styleProps={{ style: style, onClick: itemClick }}
+      styleProps={{
+        style: style,
+        onClick: click,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
       theme={theme ? theme : themeDefault}
       period={period}
       description={description}

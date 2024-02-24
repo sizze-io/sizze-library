@@ -12,6 +12,8 @@ export interface GaleryTextProps {
   subTitle?: string;
   titleStyle?: React.CSSProperties;
   subtitleStyle?: React.CSSProperties;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
 }
 
 export function SzGaleryItemWithText({
@@ -24,11 +26,18 @@ export function SzGaleryItemWithText({
   subTitle,
   titleStyle,
   subtitleStyle,
+  onHover,
+  leaveHover,
 }: GaleryTextProps) {
   const { themeDefault } = useTheme();
   return (
     <SmalScrollCard
-      styleProps={{ style: style, onClick: click }}
+      styleProps={{
+        style: style,
+        onClick: click,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
       theme={theme ? theme : themeDefault}
       image={url}
       imageStyle={{ style: imageStyle }}

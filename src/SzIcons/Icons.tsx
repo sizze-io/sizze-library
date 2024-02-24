@@ -14,6 +14,9 @@ import { useTheme } from '../SzProvider';
 export interface IconProps {
   style?: React.CSSProperties;
   theme?: string;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
 }
 
 export interface CheckboxProps {
@@ -23,102 +26,212 @@ export interface CheckboxProps {
   activeColor?: string;
 }
 
-export function SzDefaultIcon({ style, theme }: IconProps) {
+export function SzDefaultIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <DefaultIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzLeftIcon({ style, theme }: IconProps) {
+export function SzLeftIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <IconLeft
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzRightIcon({ style, theme }: IconProps) {
+export function SzRightIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <IconRight
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzStarIcon({ style, theme }: IconProps) {
+export function SzStarIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <AlertIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzPlanetIcon({ style, theme }: IconProps) {
+export function SzPlanetIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <PlanetIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzAlertIcon({ style, theme }: IconProps) {
+export function SzAlertIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <AlertIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzHelpIcon({ style, theme }: IconProps) {
+export function SzHelpIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <HelpIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzFeedbackIcon({ style, theme }: IconProps) {
+export function SzFeedbackIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <FeedbackIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzDeleteAccountIcon({ style , theme }: IconProps) {
+export function SzDeleteAccountIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <DeleteAccountIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style  }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }
 
-export function SzLogoutIcon({ style , theme }: IconProps) {
+export function SzLogoutIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
   const { themeDefault } = useTheme();
   return (
     <LogoutIcon
       theme={theme ? theme : themeDefault}
-      iconProps={{ style: style  }}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
     />
   );
 }

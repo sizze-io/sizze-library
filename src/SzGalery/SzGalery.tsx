@@ -10,7 +10,10 @@ export interface GaleryWrapperProps {
   rightTitleStyle?: React.CSSProperties;
   rightTitle?: string;
   galerySlot?: React.ReactNode;
-  rightClick?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
+  clickGeneral?: (...args: any[]) => void;
 }
 
 export function SzGalery({
@@ -19,19 +22,27 @@ export function SzGalery({
   mainTitle,
   mainTitleStyle,
   rightTitle,
-  rightClick,
+  click,
   rightTitleStyle,
+  onHover,
+  leaveHover,
+  clickGeneral,
 }: GaleryWrapperProps) {
   const { themeDefault } = useTheme();
   return (
     <Galery
-      styleProps={{ style: style }}
+      styleProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: clickGeneral,
+      }}
       theme={theme ? theme : themeDefault}
       mainTitle={mainTitle}
       rightTitle={rightTitle}
       mainTitleStyle={{ style: mainTitleStyle }}
       rightTitleStyle={{ style: rightTitleStyle }}
-      rightAction={{ onClick: rightClick }}
+      rightAction={{ onClick: click }}
     />
   );
 }

@@ -10,6 +10,9 @@ export interface PaywallProps {
   titleStyle?: React.CSSProperties;
   subTitleStyle?: React.CSSProperties;
   slot?: React.ReactNode;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
 }
 
 export function SzPaywall({
@@ -20,11 +23,19 @@ export function SzPaywall({
   slot,
   titleStyle,
   subTitleStyle,
+  onHover,
+  leaveHover,
+  click,
 }: PaywallProps) {
   const { themeDefault } = useTheme();
   return (
     <PaywallComponent
-      styleProps={{ style: style }}
+      styleProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
       theme={theme ? theme : themeDefault}
       title={title}
       subTitle={subTitle}

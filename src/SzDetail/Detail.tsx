@@ -8,13 +8,30 @@ export interface DetailProps {
   image?: string;
   buttons?: React.ReactNode;
   slot?: React.ReactNode;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
 }
 
-export function SzDetail({ image, style, theme, buttons, slot }: DetailProps) {
+export function SzDetail({
+  image,
+  style,
+  theme,
+  buttons,
+  slot,
+  onHover,
+  leaveHover,
+  click,
+}: DetailProps) {
   const { themeDefault } = useTheme();
   return (
     <DetailPageComponent
-      styleProps={{ style: style }}
+      styleProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
       theme={theme ? theme : themeDefault}
       image={image}
       buttonsSlot={buttons}

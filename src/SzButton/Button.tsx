@@ -8,20 +8,29 @@ export interface ButtonProps {
   text?: string;
   style?: React.CSSProperties;
   theme?: string;
-  buttonClick?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
   buttonIcon?: React.ReactNode;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
 }
 
 export function SzPrimaryButton({
   text,
   style,
   theme,
-  buttonClick,
+  click,
+  onHover,
+  leaveHover,
 }: ButtonProps) {
   const { themeDefault } = useTheme();
   return (
     <ButtonPrimary
-      buttonClick={{ style: style, onClick: buttonClick }}
+      buttonClick={{
+        style: style,
+        onClick: click,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
       theme={theme ? theme : themeDefault}
       text={text}
     />
