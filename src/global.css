@@ -1,3 +1,7 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code Pro:200,300,regular,500,600,700,800,900&subset=latin');
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -7576,6 +7580,11 @@ textarea.w-select {
 .div-block-52 {
   height: 1px;
   background-color: var(--gray300);
+}
+
+.div-block-53 {
+  display: flex;
+  flex-direction: column;
 }
 
 #w-node-_51f16e2c-3b5e-b3cc-e769-f23d8fc4f5bc-8fc4f5b8 {

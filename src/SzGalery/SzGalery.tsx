@@ -9,7 +9,7 @@ export interface GaleryWrapperProps {
   mainTitleStyle?: React.CSSProperties;
   rightTitleStyle?: React.CSSProperties;
   rightTitle?: string;
-  galerySlot?: React.ReactNode;
+  slot?: React.ReactNode;
   click?: (...args: any[]) => void;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
@@ -27,6 +27,7 @@ export function SzGalery({
   onHover,
   leaveHover,
   clickGeneral,
+  slot,
 }: GaleryWrapperProps) {
   const { themeDefault } = useTheme();
   return (
@@ -37,6 +38,7 @@ export function SzGalery({
         onMouseLeave: leaveHover,
         onClick: clickGeneral,
       }}
+      slot={slot}
       theme={theme ? theme : themeDefault}
       mainTitle={mainTitle}
       rightTitle={rightTitle}
