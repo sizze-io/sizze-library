@@ -11,6 +11,7 @@ export interface SettingsItemProps {
   itemClick?: (...args: any[]) => void;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
+  isLeftIconVisible?: boolean;
 }
 
 export function SzSettingsItem({
@@ -22,12 +23,14 @@ export function SzSettingsItem({
   rightIcon,
   onHover,
   leaveHover,
+  isLeftIconVisible,
 }: SettingsItemProps) {
   const { themeDefault } = useTheme();
   return (
     <RowSettings
       rightIcon={rightIcon}
       text={title}
+      visibilityIconLeft={isLeftIconVisible}
       iconSlot={leftIcon}
       settingsItemClick={{
         style: style,

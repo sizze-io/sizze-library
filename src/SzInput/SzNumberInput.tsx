@@ -8,10 +8,9 @@ export interface NumberInputProps {
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
   theme?: string;
-  value?: string;
+  value?: string | number;
   countDown?: (...args: any[]) => void;
   countUp?: (...args: any[]) => void;
-  
 }
 
 export function SzNumberInput({
@@ -22,7 +21,7 @@ export function SzNumberInput({
   leaveHover,
   value,
   countDown,
-  countUp
+  countUp,
 }: NumberInputProps) {
   const { themeDefault } = useTheme();
   return (

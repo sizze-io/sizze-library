@@ -46,7 +46,6 @@ export function ThinCardHorizontal({
         </_Builtin.Block>
       </_Builtin.Block>
       <_Builtin.Block tag="div">{iconSlot ?? <Checkbox />}</_Builtin.Block>
-      <_Builtin.Block className="space16px" tag="div" />
     </_Component>
   );
 }

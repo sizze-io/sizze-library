@@ -17,7 +17,7 @@ export function ShippingCard({
       data-theme={theme}
       {...styleProps}
     >
-      <_Builtin.Block tag="div">
+      <_Builtin.Block className="div-block-55" tag="div">
         <_Builtin.Block className="titlerow" tag="div">
           <_Builtin.Block
             className="text-block-1-2rem"
