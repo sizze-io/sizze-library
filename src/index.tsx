@@ -17,3 +17,8 @@ export * from './SzWrapper/SzWrapper';
 export * from './SzGalery/SzCardWithText';
 export * from './SzGalery/SzGalery';
 export * from './SzGalery/SzImageCard';
+export * from './SzGalery/SzCardHorizontal';
+export * from './SzWrapper/SzOrderWrapper';
+export * from './SzShippingCard/SzShippingCard';
+export * from './SzShippingCard/SzShippingCardItem';
+export * from './SzInput/SzNumberInput';

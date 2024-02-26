@@ -1,9 +1,11 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function Checkbox(props: {
+declare function ShippingCard(props: {
   as?: React.ElementType;
-  iconProps?: Types.Devlink.RuntimeProps;
+  header?: React.ReactNode;
+  headerStyle?: Types.Devlink.RuntimeProps;
+  slot?: Types.Devlink.Slot;
   theme?: Types.Builtin.Text;
   styleProps?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

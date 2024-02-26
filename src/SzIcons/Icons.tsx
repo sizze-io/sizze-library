@@ -24,6 +24,10 @@ export interface CheckboxProps {
   theme?: string;
   isActive?: boolean;
   activeColor?: string;
+  onHover?: (...args: any[]) => void;
+  leaveHover?: (...args: any[]) => void;
+  click?: (...args: any[]) => void;
+  style?: React.CSSProperties;
 }
 
 export function SzDefaultIcon({
@@ -241,16 +245,24 @@ export function SzCheckbox({
   theme,
   isActive,
   activeColor,
+  onHover,
+  leaveHover,
+  click,
+  style
 }: CheckboxProps) {
   const { themeDefault } = useTheme();
   return (
     <Checkbox
       theme={theme ? theme : themeDefault}
+      styleProps={{style: style}}
       iconProps={{
         style: {
           borderColor: color,
           background: isActive ? activeColor : 'transparent',
         },
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
       }}
     />
   );
