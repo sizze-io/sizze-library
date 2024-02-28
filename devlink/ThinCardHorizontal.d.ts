@@ -12,4 +12,6 @@ declare function ThinCardHorizontal(props: {
   iconSlot?: Types.Devlink.Slot;
   theme?: Types.Builtin.Text;
   styleProps?: Types.Devlink.RuntimeProps;
+  imageVisibility?: Types.Visibility.VisibilityConditions;
+  wrapperIconVisibility?: Types.Visibility.VisibilityConditions;
 }): React.JSX.Element;

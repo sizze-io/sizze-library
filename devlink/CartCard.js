@@ -13,6 +13,8 @@ export function CartCard({
   imageStyle = {},
   theme,
   styleProps = {},
+  price = "$1,278",
+  priceStyle = {},
 }) {
   return (
     <_Component
@@ -23,6 +25,7 @@ export function CartCard({
     >
       <_Builtin.Block className="cardsmallicon" tag="div">
         <_Builtin.Image
+          className="image-6"
           loading="lazy"
           width="auto"
           height="auto"
@@ -45,7 +48,18 @@ export function CartCard({
           </_Builtin.Block>
           <_Builtin.Block className="space12pxheight" tag="div" />
           <_Builtin.Block className="div-block-51" tag="div">
-            {inputSlot ?? <NumberInput />}
+            {inputSlot ?? (
+              <>
+                <NumberInput />
+                <_Builtin.Block
+                  className="text-block-175"
+                  tag="div"
+                  {...priceStyle}
+                >
+                  {price}
+                </_Builtin.Block>
+              </>
+            )}
           </_Builtin.Block>
           <_Builtin.Block className="space12pxheight" tag="div" />
           <_Builtin.Block className="div-block-52" tag="div" />

@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function CradLarge(props: {
+declare function ScrollCardHorizontallFull(props: {
   as?: React.ElementType;
-  labelTitle?: React.ReactNode;
-  title?: React.ReactNode;
-  subtitle?: React.ReactNode;
   image?: Types.Asset.Image;
+  title?: React.ReactNode;
+  subTitle?: React.ReactNode;
+  stars?: React.ReactNode;
 }): React.JSX.Element;

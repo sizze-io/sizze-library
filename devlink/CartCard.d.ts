@@ -12,4 +12,6 @@ declare function CartCard(props: {
   imageStyle?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
   styleProps?: Types.Devlink.RuntimeProps;
+  price?: React.ReactNode;
+  priceStyle?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

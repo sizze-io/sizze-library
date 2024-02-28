@@ -1,5 +1,6 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
+import { IconLocation } from "./IconLocation";
 import { Checkbox } from "./Checkbox";
 
 export function ThinCardHorizontal({
@@ -13,6 +14,8 @@ export function ThinCardHorizontal({
   iconSlot,
   theme,
   styleProps = {},
+  imageVisibility = true,
+  wrapperIconVisibility = true,
 }) {
   return (
     <_Component
@@ -22,14 +25,21 @@ export function ThinCardHorizontal({
       {...styleProps}
     >
       <_Builtin.Block className="cardsmallicon" tag="div">
-        <_Builtin.Image
-          loading="lazy"
-          width="auto"
-          height="auto"
-          alt=""
-          src={image}
-          {...imageStyle}
-        />
+        {imageVisibility ? (
+          <_Builtin.Image
+            loading="lazy"
+            width="auto"
+            height="auto"
+            alt=""
+            src={image}
+            {...imageStyle}
+          />
+        ) : null}
+        {wrapperIconVisibility ? (
+          <_Builtin.Block className="wrappericon" tag="div">
+            <IconLocation />
+          </_Builtin.Block>
+        ) : null}
       </_Builtin.Block>
       <_Builtin.Block className="div-block-46" tag="div">
         <_Builtin.Block tag="div">

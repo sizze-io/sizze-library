@@ -10,4 +10,10 @@ declare function RowSettings(props: {
   settingsItemClick?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
   rightIcon?: Types.Devlink.Slot;
+  subTextVisibility?: Types.Visibility.VisibilityConditions;
+  subText?: React.ReactNode;
+  checkboxVisibility?: Types.Visibility.VisibilityConditions;
+  iconVisibility?: Types.Visibility.VisibilityConditions;
+  subTextStyle?: Types.Devlink.RuntimeProps;
+  textStyle?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

@@ -2,6 +2,7 @@ import React from "react";
 import * as _Builtin from "./_Builtin";
 import { DefaultIcon } from "./DefaultIcon";
 import { IconRight } from "./IconRight";
+import { Checkbox } from "./Checkbox";
 
 export function RowSettings({
   as: _Component = _Builtin.Block,
@@ -12,6 +13,12 @@ export function RowSettings({
   settingsItemClick = {},
   theme,
   rightIcon,
+  subTextVisibility = true,
+  subText = "Profile",
+  checkboxVisibility = true,
+  iconVisibility = true,
+  subTextStyle = {},
+  textStyle = {},
 }) {
   return (
     <_Component
@@ -31,11 +38,23 @@ export function RowSettings({
         tag="div"
       >
         <_Builtin.Block
-          className="text-block-6"
-          id="w-node-efec6dc4-214e-f35f-2408-1c192056725a-20567257"
+          className="div-block-5521367"
+          id="w-node-_6a40035c-41c6-a008-ad35-10f3e95c510d-20567257"
           tag="div"
         >
-          {text}
+          <_Builtin.Block
+            className="text-block-6"
+            id="w-node-efec6dc4-214e-f35f-2408-1c192056725a-20567257"
+            tag="div"
+            {...textStyle}
+          >
+            {text}
+          </_Builtin.Block>
+          {subTextVisibility ? (
+            <_Builtin.Block className="subtext" tag="div" {...subTextStyle}>
+              {subText}
+            </_Builtin.Block>
+          ) : null}
         </_Builtin.Block>
       </_Builtin.Block>
       <_Builtin.Block
@@ -45,7 +64,20 @@ export function RowSettings({
       >
         {visibilityIconRight ? (
           <_Builtin.Block className="arrowright" tag="div">
-            {rightIcon ?? <IconRight />}
+            {rightIcon ?? (
+              <>
+                {iconVisibility ? (
+                  <_Builtin.Block tag="div">
+                    <IconRight />
+                  </_Builtin.Block>
+                ) : null}
+                {checkboxVisibility ? (
+                  <_Builtin.Block tag="div">
+                    <Checkbox />
+                  </_Builtin.Block>
+                ) : null}
+              </>
+            )}
           </_Builtin.Block>
         ) : null}
       </_Builtin.Block>

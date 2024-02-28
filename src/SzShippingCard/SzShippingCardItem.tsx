@@ -15,6 +15,8 @@ export interface ShippingCardItemProps {
   click?: (...args: any[]) => void;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
+  price?: string;
+  priceStyle?: React.CSSProperties;
 }
 
 export function SzShippingCardItem({
@@ -29,7 +31,9 @@ export function SzShippingCardItem({
   subtitle,
   subtitleStyle,
   imageStyle,
-  url
+  url,
+  price,
+  priceStyle,
 }: ShippingCardItemProps) {
   const { themeDefault } = useTheme();
   return (
@@ -43,6 +47,8 @@ export function SzShippingCardItem({
       inputSlot={slot}
       theme={theme ? theme : themeDefault}
       title={title}
+      price={price}
+      priceStyle={{style: priceStyle}}
       image={url}
       imageStyle={{style: imageStyle}}
       titleStyle={{ style: titleStyle }}

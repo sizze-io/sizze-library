@@ -6,19 +6,15 @@ export function CradLarge({
   labelTitle = "Label",
   title = "Update the plan",
   subtitle = "Select a plan to subscribe to ",
+  image = "https://uploads-ssl.webflow.com/65c7ceb894cac5f5b3bec541/65c83c6c9f2750d119b26724_Image.png",
 }) {
   return (
     <_Component className="cradlarge" tag="div">
-      <_Builtin.Image
-        className="image-3"
-        loading="lazy"
-        width="644"
-        height="auto"
-        alt=""
-        src="https://uploads-ssl.webflow.com/65c7ceb894cac5f5b3bec541/65c83c6c9f2750d119b26724_Image.png"
-      />
       <_Builtin.Block className="textblockcard" tag="div">
         <_Builtin.Block className="textwrapper" tag="div">
+          <_Builtin.Block className="textsize4 white small" tag="div">
+            {"COLLECTION"}
+          </_Builtin.Block>
           <_Builtin.Heading className="headerh4 white" tag="h3">
             {title}
           </_Builtin.Heading>
@@ -32,6 +28,15 @@ export function CradLarge({
           </_Builtin.Block>
         </_Builtin.Block>
       </_Builtin.Block>
+      <_Builtin.Image
+        className="image-3"
+        loading="lazy"
+        width="644"
+        height="auto"
+        alt=""
+        src={image}
+      />
+      <_Builtin.Block className="div-block-5521369" tag="div" />
     </_Component>
   );
 }

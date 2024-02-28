@@ -11,4 +11,7 @@ declare function Galery(props: {
   mainTitleStyle?: Types.Devlink.RuntimeProps;
   rightTitleStyle?: Types.Devlink.RuntimeProps;
   slot?: Types.Devlink.Slot;
+  image1Image?: Types.Asset.Image;
+  image2Image?: Types.Asset.Image;
+  image3Image?: Types.Asset.Image;
 }): React.JSX.Element;
