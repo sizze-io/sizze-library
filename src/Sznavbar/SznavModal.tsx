@@ -1,9 +1,10 @@
 import React from 'react';
-import { NavBar1 } from '../../devlink/NavBar1';
+import { NavModal } from '../../devlink/NavModal';
 import { useTheme } from '../SzProvider';
 
-export interface SzNavProps {
-  text?: string;
+export interface SzNavModalProps {
+  title?: string;
+  titleStyle?: React.CSSProperties;
   icon?: React.ReactNode;
   style?: React.CSSProperties;
   theme?: string;
@@ -13,8 +14,9 @@ export interface SzNavProps {
   iconClick?: (...args: any[]) => void;
 }
 
-export function SzNav({
-  text,
+export function SzNavModal({
+  title,
+  titleStyle,
   theme,
   icon,
   style,
@@ -22,15 +24,16 @@ export function SzNav({
   leaveHover,
   click,
   iconClick,
-}: SzNavProps) {
+}: SzNavModalProps) {
   const { themeDefault } = useTheme();
   return (
-    <NavBar1
+    <NavModal
       theme={theme ? theme : themeDefault}
-      text={text}
-      icon={icon}
-      iconClick={{ onClick: iconClick }}
-      style={{
+      title={title}
+      titleStyle={{ style: titleStyle }}
+      rightIcon={icon}
+      iconProps={{ onClick: iconClick }}
+      styleProps={{
         style: style,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,

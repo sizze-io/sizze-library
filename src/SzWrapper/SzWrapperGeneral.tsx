@@ -1,41 +1,35 @@
 import React from 'react';
-import { NavBar1 } from '../../devlink/NavBar1';
+import { WrapperGeneral } from '../../devlink/WrapperGeneral';
 import { useTheme } from '../SzProvider';
 
-export interface SzNavProps {
-  text?: string;
-  icon?: React.ReactNode;
+export interface WrapperGeneralProps {
   style?: React.CSSProperties;
   theme?: string;
+  slot?: React.ReactNode;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
   click?: (...args: any[]) => void;
-  iconClick?: (...args: any[]) => void;
 }
 
-export function SzNav({
-  text,
-  theme,
-  icon,
+export function SzWrapperGeneral({
   style,
+  theme,
+  slot,
   onHover,
   leaveHover,
   click,
-  iconClick,
-}: SzNavProps) {
+}: WrapperGeneralProps) {
   const { themeDefault } = useTheme();
   return (
-    <NavBar1
-      theme={theme ? theme : themeDefault}
-      text={text}
-      icon={icon}
-      iconClick={{ onClick: iconClick }}
-      style={{
+    <WrapperGeneral
+      props={{
         style: style,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,
         onClick: click,
       }}
+      theme={theme ? theme : themeDefault}
+      slot={slot}
     />
   );
 }

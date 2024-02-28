@@ -1,8 +1,8 @@
 import React from 'react';
-import { ThinCardHorizontal } from '../../devlink/ThinCardHorizontal';
+import { ScrollCardHorizontallFull } from '../../devlink/ScrollCardHorizontallFull';
 import { useTheme } from '../SzProvider';
 
-export interface GaleryHorizontalProps {
+export interface GaleryHorizontalFullProps {
   style?: React.CSSProperties;
   theme?: string;
   url?: string;
@@ -14,11 +14,12 @@ export interface GaleryHorizontalProps {
   subTitle?: string;
   titleStyle?: React.CSSProperties;
   subtitleStyle?: React.CSSProperties;
-  icon?: React.ReactNode;
-  iconVisibility?: boolean;
+  starSlot?: React.ReactNode;
+  stars?: string;
+  starsStyle?: React.CSSProperties;
 }
 
-export function SzGaleryItemHorizontal({
+export function SzGaleryItemHorizontalFull({
   style,
   theme,
   click,
@@ -30,12 +31,13 @@ export function SzGaleryItemHorizontal({
   subtitleStyle,
   onHover,
   leaveHover,
-  icon,
-  iconVisibility
-}: GaleryHorizontalProps) {
+  starSlot,
+  stars,
+  starsStyle,
+}: GaleryHorizontalFullProps) {
   const { themeDefault } = useTheme();
   return (
-    <ThinCardHorizontal
+    <ScrollCardHorizontallFull
       styleProps={{
         style: style,
         onClick: click,
@@ -43,14 +45,15 @@ export function SzGaleryItemHorizontal({
         onMouseLeave: leaveHover,
       }}
       theme={theme ? theme : themeDefault}
-      iconSlot={icon}
+      starsSlot={starSlot}
       image={url}
       imageStyle={{ style: imageStyle }}
       title={title}
       subTitle={subTitle}
       titleStyle={{ style: titleStyle }}
-      subTitleStyle={{ style: subtitleStyle }}
-      wrapperIconVisibility={iconVisibility}
+      subtitleStyle={{ style: subtitleStyle }}
+      stars={stars}
+      starsStyle={{ style: starsStyle }}
     />
   );
 }

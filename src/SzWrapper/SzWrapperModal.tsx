@@ -1,41 +1,35 @@
 import React from 'react';
-import { NavBar1 } from '../../devlink/NavBar1';
+import { ModalWrapper } from '../../devlink/ModalWrapper';
 import { useTheme } from '../SzProvider';
 
-export interface SzNavProps {
-  text?: string;
-  icon?: React.ReactNode;
+export interface WrapperModalProps {
   style?: React.CSSProperties;
   theme?: string;
+  slot?: React.ReactNode;
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
   click?: (...args: any[]) => void;
-  iconClick?: (...args: any[]) => void;
 }
 
-export function SzNav({
-  text,
-  theme,
-  icon,
+export function SzWrapperModal({
   style,
+  theme,
+  slot,
   onHover,
   leaveHover,
   click,
-  iconClick,
-}: SzNavProps) {
+}: WrapperModalProps) {
   const { themeDefault } = useTheme();
   return (
-    <NavBar1
-      theme={theme ? theme : themeDefault}
-      text={text}
-      icon={icon}
-      iconClick={{ onClick: iconClick }}
-      style={{
+    <ModalWrapper
+      styleProps={{
         style: style,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,
         onClick: click,
       }}
+      theme={theme ? theme : themeDefault}
+      slot={slot}
     />
   );
 }

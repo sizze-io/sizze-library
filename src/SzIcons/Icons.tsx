@@ -9,6 +9,8 @@ import { Checkbox } from '../../devlink/Checkbox';
 import { LogoutIcon } from '../../devlink/LogoutIcon';
 import { IconLeft } from '../../devlink/IconLeft';
 import { IconRight } from '../../devlink/IconRight';
+import { StarColorIcon } from '../../devlink/StarColorIcon';
+import { CloseIcon } from '../../devlink/CloseIcon';
 import { useTheme } from '../SzProvider';
 
 export interface IconProps {
@@ -42,6 +44,48 @@ export function SzDefaultIcon({
     <DefaultIcon
       theme={theme ? theme : themeDefault}
       iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
+    />
+  );
+}
+
+export function SzCloseIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
+  const { themeDefault } = useTheme();
+  return (
+    <CloseIcon
+      theme={theme ? theme : themeDefault}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
+    />
+  );
+}
+
+export function SzStarColorIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
+  const { themeDefault } = useTheme();
+  return (
+    <StarColorIcon
+      theme={theme ? theme : themeDefault}
+      styleProps={{
         style: style,
         onMouseEnter: onHover,
         onMouseLeave: leaveHover,

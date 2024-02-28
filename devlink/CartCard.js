@@ -48,18 +48,16 @@ export function CartCard({
           </_Builtin.Block>
           <_Builtin.Block className="space12pxheight" tag="div" />
           <_Builtin.Block className="div-block-51" tag="div">
-            {inputSlot ?? (
-              <>
-                <NumberInput />
-                <_Builtin.Block
-                  className="text-block-175"
-                  tag="div"
-                  {...priceStyle}
-                >
-                  {price}
-                </_Builtin.Block>
-              </>
-            )}
+            <_Builtin.Block tag="div">
+              {inputSlot ?? <NumberInput />}
+            </_Builtin.Block>
+            <_Builtin.Block
+              className="text-block-175"
+              tag="div"
+              {...priceStyle}
+            >
+              {price}
+            </_Builtin.Block>
           </_Builtin.Block>
           <_Builtin.Block className="space12pxheight" tag="div" />
           <_Builtin.Block className="div-block-52" tag="div" />

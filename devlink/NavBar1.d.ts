@@ -8,4 +8,5 @@ declare function NavBar1(props: {
   icon?: Types.Devlink.Slot;
   style?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
+  iconClick?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

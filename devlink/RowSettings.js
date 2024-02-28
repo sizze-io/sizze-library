@@ -32,11 +32,7 @@ export function RowSettings({
           {iconSlot ?? <DefaultIcon />}
         </_Builtin.Block>
       ) : null}
-      <_Builtin.Block
-        className="wrappertextsettings"
-        id="w-node-_99a3e4ae-7794-3831-9c20-1744d0eeddb0-20567257"
-        tag="div"
-      >
+      <_Builtin.Block className="wrappertextsettings" tag="div">
         <_Builtin.Block
           className="div-block-5521367"
           id="w-node-_6a40035c-41c6-a008-ad35-10f3e95c510d-20567257"

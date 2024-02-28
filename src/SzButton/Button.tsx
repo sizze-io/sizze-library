@@ -2,6 +2,7 @@ import React from 'react';
 import { ButtonPrimary } from '../../devlink/ButtonPrimary';
 import { ButtonSecondary } from '../../devlink/ButtonSecondary';
 import { BackButton } from '../../devlink/BackButton';
+import { NavButton } from '../../devlink/NavButton';
 import { useTheme } from '../SzProvider';
 
 export interface ButtonProps {
@@ -81,6 +82,29 @@ export function SzBackButton({
       }}
       theme={theme ? theme : themeDefault}
       iconSlot={buttonIcon}
+    />
+  );
+}
+
+export function SzNavButton({
+  style,
+  theme,
+  click,
+  buttonIcon,
+  onHover,
+  leaveHover,
+}: ButtonProps) {
+  const { themeDefault } = useTheme();
+  return (
+    <NavButton
+      buttonProps={{
+        style: style,
+        onClick: click,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
+      theme={theme ? theme : themeDefault}
+      slot={buttonIcon}
     />
   );
 }

@@ -25,16 +25,6 @@ export function ImageFullDetails({
         src={image}
         {...imageStyle}
       />
-      <_Builtin.Block className="variantscolors" tag="div">
-        <_Builtin.Block className="text-block-16" tag="div">
-          {"+3 colors"}
-        </_Builtin.Block>
-        <_Builtin.Block className="div-block-43" tag="div">
-          <_Builtin.Block className="div-block-42" tag="div" />
-          <_Builtin.Block className="div-block-42 second" tag="div" />
-          <_Builtin.Block className="div-block-42 third" tag="div" />
-        </_Builtin.Block>
-      </_Builtin.Block>
     </_Component>
   );
 }

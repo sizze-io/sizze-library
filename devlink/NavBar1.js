@@ -9,6 +9,7 @@ export function NavBar1({
   icon,
   style = {},
   theme,
+  iconClick = {},
 }) {
   return (
     <_Component className="navbar-1" tag="div" data-theme={theme} {...style}>
@@ -20,7 +21,7 @@ export function NavBar1({
         {visibilityIcon ? (
           <_Builtin.Block className="lefticonthirdline" tag="div">
             <_Builtin.Block className="iconwrapper" tag="div">
-              <_Builtin.Block className="wrappericon" tag="div">
+              <_Builtin.Block className="wrappericon" tag="div" {...iconClick}>
                 {icon ?? <DefaultIcon />}
               </_Builtin.Block>
             </_Builtin.Block>
