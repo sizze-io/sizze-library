@@ -22,6 +22,7 @@ export * from "./DefaultIcon";
 export * from "./DeleteAccountIcon";
 export * from "./DescriptionBlock";
 export * from "./DetailPageComponent";
+export * from "./DiscoverCard";
 export * from "./FacebookIcon";
 export * from "./FeedbackIcon";
 export * from "./Galery";

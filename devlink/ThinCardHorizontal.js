@@ -25,6 +25,7 @@ export function ThinCardHorizontal({
     >
       {imageVisibility ? (
         <_Builtin.Image
+          className="image-7"
           loading="lazy"
           width="auto"
           height="auto"

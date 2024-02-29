@@ -17,7 +17,12 @@ export function ScrollCardHorizontallFull({
   imageStyle = {},
 }) {
   return (
-    <_Component className="scrollcardhorizontallfull" tag="div">
+    <_Component
+      className="scrollcardhorizontallfull"
+      tag="div"
+      data-theme={theme}
+      {...styleProps}
+    >
       <_Builtin.Block className="div-block-38" tag="div">
         <_Builtin.Image
           className="image-4"
