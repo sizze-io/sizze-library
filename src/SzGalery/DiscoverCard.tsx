@@ -17,6 +17,7 @@ export interface DiscoverCardProps {
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
   click?: (...args: any[]) => void;
+  labelTextStyle?: React.CSSProperties;
 }
 
 export function SzDiscoverCard({
@@ -34,6 +35,7 @@ export function SzDiscoverCard({
   labelAction,
   labelText,
   labelStyle,
+  labelTextStyle
 }: DiscoverCardProps) {
   const { themeDefault } = useTheme();
   return (
@@ -52,6 +54,7 @@ export function SzDiscoverCard({
       title={title}
       subTitle={subTitle}
       labelText={labelText}
+      labelTextStyle={{style: labelTextStyle}}
       labelStyle={{ style: labelStyle, onClick: labelAction }}
     />
   );

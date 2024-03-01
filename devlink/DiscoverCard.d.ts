@@ -13,4 +13,5 @@ declare function DiscoverCard(props: {
   titleStyle?: Types.Devlink.RuntimeProps;
   subTitleStyle?: Types.Devlink.RuntimeProps;
   imageStyle?: Types.Devlink.RuntimeProps;
+  labelTextStyle?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

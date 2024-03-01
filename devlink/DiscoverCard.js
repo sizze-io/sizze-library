@@ -13,6 +13,7 @@ export function DiscoverCard({
   titleStyle = {},
   subTitleStyle = {},
   imageStyle = {},
+  labelTextStyle = {},
 }) {
   return (
     <_Component
@@ -48,7 +49,11 @@ export function DiscoverCard({
           <_Builtin.Block className="div-block-52" tag="div" />
         </_Builtin.Block>
         <_Builtin.Block className="labeldark" tag="div" {...labelStyle}>
-          <_Builtin.Block className="text-block-10" tag="div">
+          <_Builtin.Block
+            className="text-block-10"
+            tag="div"
+            {...labelTextStyle}
+          >
             {labelText}
           </_Builtin.Block>
         </_Builtin.Block>
