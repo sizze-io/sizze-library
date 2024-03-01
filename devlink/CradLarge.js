@@ -15,6 +15,7 @@ export function CradLarge({
   imageStyle = {},
   generalStyle = {},
   theme,
+  labelTextStyle = {},
 }) {
   return (
     <_Component
@@ -26,6 +27,13 @@ export function CradLarge({
       <_Builtin.Block className="textblockcard" tag="div">
         <_Builtin.Block className="textwrapper" tag="div">
           <_Builtin.Block
+            className="textsize4 white"
+            tag="div"
+            {...subTitleStyle}
+          >
+            {subtitle}
+          </_Builtin.Block>
+          <_Builtin.Block
             className="textsize4 white small"
             tag="div"
             {...descriptionStyle}
@@ -35,16 +43,13 @@ export function CradLarge({
           <_Builtin.Heading className="headerh4 white" tag="h3" {...titleStyle}>
             {title}
           </_Builtin.Heading>
-          <_Builtin.Block
-            className="textsize4 white"
-            tag="div"
-            {...subTitleStyle}
-          >
-            {subtitle}
-          </_Builtin.Block>
         </_Builtin.Block>
         <_Builtin.Block className="div-block-29" tag="div" {...labelStyle}>
-          <_Builtin.Block className="text-block-10" tag="div">
+          <_Builtin.Block
+            className="text-block-10"
+            tag="div"
+            {...labelTextStyle}
+          >
             {labelTitle}
           </_Builtin.Block>
         </_Builtin.Block>

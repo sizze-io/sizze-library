@@ -19,6 +19,7 @@ export interface ImageCardProps {
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
   click?: (...args: any[]) => void;
+  labelTextStyle?: React.CSSProperties;
 }
 
 export function SzImageCard({
@@ -38,6 +39,7 @@ export function SzImageCard({
   labelAction,
   labelText,
   labelStyle,
+  labelTextStyle
 }: ImageCardProps) {
   const { themeDefault } = useTheme();
   return (
@@ -51,6 +53,7 @@ export function SzImageCard({
       theme={theme ? theme : themeDefault}
       imageStyle={{ style: imageStyle }}
       image={url}
+      labelTextStyle={{ style: labelTextStyle }}
       titleStyle={{ style: titleStyle }}
       subTitleStyle={{ style: subTitleStyle }}
       descriptionStyle={{ style: descriptionStyle }}

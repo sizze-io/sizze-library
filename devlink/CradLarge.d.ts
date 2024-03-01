@@ -15,4 +15,5 @@ declare function CradLarge(props: {
   imageStyle?: Types.Devlink.RuntimeProps;
   generalStyle?: Types.Devlink.RuntimeProps;
   theme?: Types.Builtin.Text;
+  labelTextStyle?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;
