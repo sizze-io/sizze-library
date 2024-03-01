@@ -32,3 +32,8 @@ export * from './Sznavbar/SznavSearch';
 export * from './SzInput/SzInputComponent';
 export * from './SzWrapper/SzWrapperGeneral';
 export * from './SzWrapper/SzWrapperModal';
+export * from './SzImage/ImageCard';
+export * from './SzGalery/DiscoverCard';
+export * from './SzWrapper/SzTextWrapper';
+export * from './SzWrapper/SzDivider';
+export * from './SzWrapper/SzSocialButtonWrapper';

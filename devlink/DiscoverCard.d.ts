@@ -6,4 +6,11 @@ declare function DiscoverCard(props: {
   image?: Types.Asset.Image;
   title?: React.ReactNode;
   subTitle?: React.ReactNode;
+  styleProps?: Types.Devlink.RuntimeProps;
+  theme?: Types.Builtin.Text;
+  labelStyle?: Types.Devlink.RuntimeProps;
+  labelText?: React.ReactNode;
+  titleStyle?: Types.Devlink.RuntimeProps;
+  subTitleStyle?: Types.Devlink.RuntimeProps;
+  imageStyle?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

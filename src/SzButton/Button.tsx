@@ -3,6 +3,7 @@ import { ButtonPrimary } from '../../devlink/ButtonPrimary';
 import { ButtonSecondary } from '../../devlink/ButtonSecondary';
 import { BackButton } from '../../devlink/BackButton';
 import { NavButton } from '../../devlink/NavButton';
+import { SocalButton} from '../../devlink/SocalButton';
 import { useTheme } from '../SzProvider';
 
 export interface ButtonProps {
@@ -85,6 +86,30 @@ export function SzBackButton({
     />
   );
 }
+
+export function SzSocialButton({
+  style,
+  theme,
+  click,
+  buttonIcon,
+  onHover,
+  leaveHover,
+}: ButtonProps) {
+  const { themeDefault } = useTheme();
+  return (
+    <SocalButton
+      styleProps={{
+        style: style,
+        onClick: click,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+      }}
+      theme={theme ? theme : themeDefault}
+      icon={buttonIcon}
+    />
+  );
+}
+
 
 export function SzNavButton({
   style,

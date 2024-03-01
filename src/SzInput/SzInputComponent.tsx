@@ -11,7 +11,9 @@ export interface TextInputProps {
   value?: string | number;
   icon?: React.ReactNode;
   iconStyle?: React.CSSProperties;
+  inputStyle?: React.CSSProperties;
   onChangeValue?: (...args: any[]) => void;
+  placeholder?: string;
 }
 
 export function SzTextInput({
@@ -23,7 +25,9 @@ export function SzTextInput({
   value,
   icon,
   iconStyle,
-  onChangeValue
+  onChangeValue,
+  placeholder,
+  inputStyle,
 }: TextInputProps) {
   const { themeDefault } = useTheme();
   return (
@@ -35,8 +39,13 @@ export function SzTextInput({
         onClick: click,
       }}
       theme={theme ? theme : themeDefault}
-      inputValue={{value: value, onChange: onChangeValue}}
-      iconStyle={{style: iconStyle}}
+      inputValue={{
+        value: value,
+        onChange: onChangeValue,
+        placeholder: placeholder,
+        style: inputStyle,
+      }}
+      iconStyle={{ style: iconStyle }}
       iconSlot={icon}
     />
   );

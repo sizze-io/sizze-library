@@ -15,6 +15,7 @@ export function Galery({
   image1Image = "https://uploads-ssl.webflow.com/65c7ceb894cac5f5b3bec541/65c83c6c9f2750d119b26724_Image.png",
   image2Image = "https://uploads-ssl.webflow.com/65c7ceb894cac5f5b3bec541/65c83c6c9f2750d119b26724_Image.png",
   image3Image = "https://uploads-ssl.webflow.com/65c7ceb894cac5f5b3bec541/65c83c6c9f2750d119b26724_Image.png",
+  scrollStyle = {},
 }) {
   return (
     <_Component
@@ -39,7 +40,7 @@ export function Galery({
           </_Builtin.Block>
         </_Builtin.Block>
       </_Builtin.Block>
-      <_Builtin.Block className="srollblock" tag="div">
+      <_Builtin.Block className="srollblock" tag="div" {...scrollStyle}>
         {slot ?? (
           <>
             <GallaryCard image={image1Image} />

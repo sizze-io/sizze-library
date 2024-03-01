@@ -11,6 +11,9 @@ import { IconLeft } from '../../devlink/IconLeft';
 import { IconRight } from '../../devlink/IconRight';
 import { StarColorIcon } from '../../devlink/StarColorIcon';
 import { CloseIcon } from '../../devlink/CloseIcon';
+import { GoogleIcon } from '../../devlink/GoogleIcon';
+import { FacebookIcon } from '../../devlink/FacebookIcon';
+import { AppleIcon } from '../../devlink/AppleIcon';
 import { useTheme } from '../SzProvider';
 
 export interface IconProps {
@@ -284,6 +287,19 @@ export function SzLogoutIcon({
   );
 }
 
+export function SzGoogleIcon() {
+  return <GoogleIcon/>;
+}
+
+export function SzFacebookIcon() {
+  return <FacebookIcon/>;
+}
+
+
+export function SzAppleIcon() {
+  return <AppleIcon/>;
+}
+
 export function SzCheckbox({
   color,
   theme,
@@ -292,13 +308,13 @@ export function SzCheckbox({
   onHover,
   leaveHover,
   click,
-  style
+  style,
 }: CheckboxProps) {
   const { themeDefault } = useTheme();
   return (
     <Checkbox
       theme={theme ? theme : themeDefault}
-      styleProps={{style: style}}
+      styleProps={{ style: style }}
       iconProps={{
         style: {
           borderColor: color,

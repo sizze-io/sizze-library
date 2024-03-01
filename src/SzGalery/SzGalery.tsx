@@ -14,6 +14,7 @@ export interface GaleryWrapperProps {
   onHover?: (...args: any[]) => void;
   leaveHover?: (...args: any[]) => void;
   clickGeneral?: (...args: any[]) => void;
+  direction?: string;
 }
 
 export function SzGalery({
@@ -28,6 +29,7 @@ export function SzGalery({
   leaveHover,
   clickGeneral,
   slot,
+  direction,
 }: GaleryWrapperProps) {
   const { themeDefault } = useTheme();
   return (
@@ -38,6 +40,7 @@ export function SzGalery({
         onMouseLeave: leaveHover,
         onClick: clickGeneral,
       }}
+      scrollStyle={{ style: { flexDirection: direction } }}
       slot={slot}
       theme={theme ? theme : themeDefault}
       mainTitle={mainTitle}

@@ -7,4 +7,12 @@ declare function CradLarge(props: {
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
   image?: Types.Asset.Image;
+  labelStyle?: Types.Devlink.RuntimeProps;
+  description?: React.ReactNode;
+  subTitleStyle?: Types.Devlink.RuntimeProps;
+  titleStyle?: Types.Devlink.RuntimeProps;
+  descriptionStyle?: Types.Devlink.RuntimeProps;
+  imageStyle?: Types.Devlink.RuntimeProps;
+  generalStyle?: Types.Devlink.RuntimeProps;
+  theme?: Types.Builtin.Text;
 }): React.JSX.Element;

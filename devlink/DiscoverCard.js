@@ -6,9 +6,21 @@ export function DiscoverCard({
   image = "https://uploads-ssl.webflow.com/65c7ceb894cac5f5b3bec541/65c83c6c9f2750d119b26724_Image.png",
   title = "4468 Desert Broom Court",
   subTitle = "Jersey City, NJ, 07306",
+  styleProps = {},
+  theme,
+  labelStyle = {},
+  labelText = "Show",
+  titleStyle = {},
+  subTitleStyle = {},
+  imageStyle = {},
 }) {
   return (
-    <_Component className="discovercard" tag="div" data-theme="">
+    <_Component
+      className="discovercard"
+      tag="div"
+      data-theme={theme}
+      {...styleProps}
+    >
       <_Builtin.Block className="cardsmallicon" tag="div">
         <_Builtin.Image
           className="image-6"
@@ -17,22 +29,27 @@ export function DiscoverCard({
           height="auto"
           alt=""
           src={image}
+          {...imageStyle}
         />
       </_Builtin.Block>
       <_Builtin.Block className="wrapperbuttonandtext" tag="div">
         <_Builtin.Block className="wrappertextcard" tag="div">
-          <_Builtin.Block className="text-block-12" tag="div">
+          <_Builtin.Block className="text-block-12" tag="div" {...titleStyle}>
             {title}
           </_Builtin.Block>
-          <_Builtin.Block className="text-block-13" tag="div">
+          <_Builtin.Block
+            className="text-block-13"
+            tag="div"
+            {...subTitleStyle}
+          >
             {subTitle}
           </_Builtin.Block>
           <_Builtin.Block className="space12pxheight" tag="div" />
           <_Builtin.Block className="div-block-52" tag="div" />
         </_Builtin.Block>
-        <_Builtin.Block className="labeldark" tag="div">
+        <_Builtin.Block className="labeldark" tag="div" {...labelStyle}>
           <_Builtin.Block className="text-block-10" tag="div">
-            {"Show"}
+            {labelText}
           </_Builtin.Block>
         </_Builtin.Block>
       </_Builtin.Block>
