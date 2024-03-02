@@ -40,7 +40,13 @@ export function SzGalery({
         onMouseLeave: leaveHover,
         onClick: clickGeneral,
       }}
-      scrollStyle={{ style: { flexDirection: direction } }}
+      scrollStyle={{
+        style: {
+          flexDirection: direction,
+          overflow: direction === 'column' ? 'inherit' : 'scroll',
+          width: direction === 'column' ? '0' : '100vw',
+        },
+      }}
       slot={slot}
       theme={theme ? theme : themeDefault}
       mainTitle={mainTitle}

@@ -9,7 +9,7 @@ export function ButtonPrimary({
 }) {
   return (
     <_Component
-      className="buttonprimary"
+      className="betta-buttonprimary"
       tag="div"
       data-theme={theme}
       {...buttonClick}

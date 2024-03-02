@@ -12,7 +12,7 @@ export function ModalWrapper({
   return (
     <_Component className="div-block-308" tag="div">
       <_Builtin.Block
-        className="modal-create-event long"
+        className="betta-modal-create-event long"
         tag="div"
         data-theme={theme}
         {...styleProps}
@@ -20,8 +20,12 @@ export function ModalWrapper({
         {slot ?? (
           <>
             <NavModal />
-            <_Builtin.Block className="wrapperstates" tag="div">
-              <_Builtin.Block className="wrappermodal" tag="div" data-theme="">
+            <_Builtin.Block className="betta-wrapperstates" tag="div">
+              <_Builtin.Block
+                className="betta-wrappermodal"
+                tag="div"
+                data-theme=""
+              >
                 <_Builtin.Block
                   className="sectioninsidesettings"
                   tag="div"

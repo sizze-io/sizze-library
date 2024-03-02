@@ -4,7 +4,7 @@ import * as _Builtin from "./_Builtin";
 export function TextField({ as: _Component = _Builtin.FormTextInput }) {
   return (
     <_Component
-      className="textfield"
+      className="betta-textfield"
       autoFocus={false}
       maxLength={256}
       name="Email-2"

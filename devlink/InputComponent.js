@@ -18,7 +18,7 @@ export function InputComponent({
       {...inputStyle}
     >
       <_Builtin.FormTextInput
-        className="search-input"
+        className="batta-search-input"
         autoFocus={false}
         maxLength={256}
         name="Contact-01-name-2"
@@ -27,6 +27,7 @@ export function InputComponent({
         type="text"
         disabled={false}
         required={true}
+        data-theme={theme}
         id="Contact-01-name-2"
         {...inputValue}
       />

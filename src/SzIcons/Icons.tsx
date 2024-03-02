@@ -288,16 +288,32 @@ export function SzLogoutIcon({
 }
 
 export function SzGoogleIcon() {
-  return <GoogleIcon/>;
+  return <GoogleIcon />;
 }
 
 export function SzFacebookIcon() {
-  return <FacebookIcon/>;
+  return <FacebookIcon />;
 }
 
-
-export function SzAppleIcon() {
-  return <AppleIcon/>;
+export function SzAppleIcon({
+  style,
+  theme,
+  onHover,
+  leaveHover,
+  click,
+}: IconProps) {
+  const { themeDefault } = useTheme();
+  return (
+    <AppleIcon
+      theme={theme ? theme : themeDefault}
+      iconProps={{
+        style: style,
+        onMouseEnter: onHover,
+        onMouseLeave: leaveHover,
+        onClick: click,
+      }}
+    />
+  );
 }
 
 export function SzCheckbox({
