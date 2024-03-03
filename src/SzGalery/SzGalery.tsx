@@ -44,7 +44,7 @@ export function SzGalery({
         style: {
           flexDirection: direction,
           overflow: direction === 'column' ? 'inherit' : 'scroll',
-          width: direction === 'column' ? 'auto' : '100vw',
+          width: direction === 'column' ? 'auto' : 'calc(100% + 32px)',
           marginRight: direction === 'column' ? '0px' : '34px',
           paddingRight: direction === 'column' ? '0px' : '16px',
         },
