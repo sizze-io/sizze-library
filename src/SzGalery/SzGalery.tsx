@@ -44,7 +44,9 @@ export function SzGalery({
         style: {
           flexDirection: direction,
           overflow: direction === 'column' ? 'inherit' : 'scroll',
-          width: direction === 'column' ? '0' : '100vw',
+          width: direction === 'column' ? 'auto' : '100vw',
+          marginRight: direction === 'column' ? '0px' : '34px',
+          paddingRight: direction === 'column' ? '0px' : '16px',
         },
       }}
       slot={slot}
