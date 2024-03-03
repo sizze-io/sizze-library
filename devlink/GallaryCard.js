@@ -17,7 +17,7 @@ export function GallaryCard({
     >
       <_Builtin.Block className="gallarycard" tag="div">
         <_Builtin.Image
-          className="image-4"
+          className="betta-image-cards"
           loading="lazy"
           width="auto"
           height="auto"

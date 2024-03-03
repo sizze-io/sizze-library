@@ -26,14 +26,14 @@ export function OrderWrapper({
       <_Builtin.Block className="div-block-47" tag="div">
         <_Builtin.Block tag="div">
           <_Builtin.Block
-            className="text-block-13"
+            className="text-block-13 left"
             tag="div"
             {...subtotalPrice}
           >
             {subtotalPriceText}
           </_Builtin.Block>
           <_Builtin.Block
-            className="text-block-13"
+            className="text-block-13 left"
             tag="div"
             {...shippingPrice}
           >
@@ -41,10 +41,14 @@ export function OrderWrapper({
           </_Builtin.Block>
         </_Builtin.Block>
         <_Builtin.Block className="div-block-48" tag="div">
-          <_Builtin.Block className="text-block-13" tag="div" {...title}>
+          <_Builtin.Block className="text-block-13 right" tag="div" {...title}>
             {titleText}
           </_Builtin.Block>
-          <_Builtin.Block className="text-block-17" tag="div" {...priceStyle}>
+          <_Builtin.Block
+            className="text-block-17 right"
+            tag="div"
+            {...priceStyle}
+          >
             {price}
           </_Builtin.Block>
         </_Builtin.Block>

@@ -46,7 +46,7 @@ export function CradLarge({
         </_Builtin.Block>
         <_Builtin.Block className="div-block-29" tag="div" {...labelStyle}>
           <_Builtin.Block
-            className="text-block-10"
+            className="textblocklabelwhite"
             tag="div"
             {...labelTextStyle}
           >

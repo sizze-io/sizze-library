@@ -2239,55 +2239,6 @@ textarea.w-select {
   --untitled-ui--warning300: #fec84b;
 }
 
-[data-theme="dark"] {
-  --white-e8d77b4c: white;
-  --black-dee62c75: black;
-  --untitledUiGray700-d4f37b50: #344054;
-  --untitledUiPrimary600-c514c1b4: #7f56d9;
-  --untitledUiWhite-e3beb9c1: hsla(0, 0.00%, 100.00%, 1.00);
-  --untitledUiPrimary700-da4f7fa3: #6941c6;
-  --untitledUiPrimary100-35a3c723: #f4ebff;
-  --untitledUiGray600-10a0cd12: #475467;
-  --untitledUiGray50-8a511359: hsla(210, 20.00%, 98.04%, 1.00);
-  --untitledUiGray300-51e0117e: hsla(216.9230769230769, 16.05%, 84.12%, 1.00);
-  --untitledUiGray800-0a1a9f61: #1d2939;
-  --untitledUiGray100-4a47ec41: hsla(215.9999999999998, 23.81%, 95.88%, 1.00);
-  --untitledUiGray900-f63dbb51: #101828;
-  --untitledUiPrimary800-ddf4f85f: #53389e;
-  --untitledUiSuccess50-9177f7a8: #ecfdf3;
-  --untitledUiSuccess700-1c4c81d0: #027a48;
-  --untitledUiGray500-68f29e84: #667085;
-  --untitledUiGray400-b339bef7: hsla(217.77777777777777, 15.08%, 64.90%, 1.00);
-  --untitledUiGray200-bad2ea62: hsla(219.99999999999983, 16.67%, 92.94%, 1.00);
-  --untitledUiPrimary300-b540dac6: #d6bbfb;
-  --untitledUiPrimary50-a4451441: #f9f5ff;
-  --untitledUiWarning500-afb748c5: #f79009;
-  --untitledUiOrange50-9a588145: hsla(30, 88.89%, 96.47%, 1.00);
-  --untitledUiOrange700-c3f117d3: hsla(12.80487804878049, 79.61%, 40.39%, 1.00);
-  --untitledUiIndigo500-386535af: hsla(233.01369863013696, 85.88%, 66.67%, 1.00);
-  --untitledUiIndigo50-d9f30971: hsla(218.8235294117647, 100.00%, 96.67%, 1.00);
-  --untitledUiIndigo700-a6995f81: hsla(238.8157894736842, 60.32%, 50.59%, 1.00);
-  --untitledUiPink500-2c076908: hsla(317.85714285714283, 83.17%, 60.39%, 1.00);
-  --untitledUiPink50-7f28bd70: hsla(316.36363636363643, 73.33%, 97.06%, 1.00);
-  --untitledUiPink700-1c44a7e0: hsla(326.86046511627904, 80.37%, 41.96%, 1.00);
-  --untitledUiBlue500-758c40af: hsla(211.1764705882353, 95.33%, 58.04%, 1.00);
-  --untitledUiBlue50-7cea0dae: hsla(206.25, 100.00%, 96.86%, 1.00);
-  --untitledUiBlue700-ca2d2726: hsla(217.9787234042553, 80.34%, 45.88%, 1.00);
-  --untitled-ui--gray200\<deleted\|variable-bad2ea62\>: #eaecf0;
-  --gray900: #F0F1F1;
-  --gray800: #ECECED;
-  --gray700: #CECFD2;
-  --gray600: #94969C;
-  --gray500: #85888E;
-  --gray400: #61646C;
-  --gray300: #333741;
-  --gray200: #333741;
-  --gray100: #1F242F;
-  --gray50: #161B26;
-  --indigo: #6172f3;
-  --white: #000;
-}
-
 .thirdlinenavbar {
   display: flex;
   height: 3rem;
@@ -6303,6 +6254,7 @@ textarea.w-select {
 }
 
 .text-block-10 {
+  color: var(--white);
   font-weight: 600;
 }
 
@@ -6355,6 +6307,10 @@ textarea.w-select {
 
 .text-block-12 {
   font-size: 0.9rem;
+}
+
+.text-block-12.left {
+  text-align: left;
 }
 
 .uui-text-size-small-2 {
@@ -6773,6 +6729,14 @@ textarea.w-select {
   font-size: 0.8rem;
 }
 
+.text-block-13.left {
+  text-align: left;
+}
+
+.text-block-13.right {
+  text-align: right;
+}
+
 .div-block-33 {
   display: flex;
   overflow: hidden;
@@ -6854,7 +6818,7 @@ textarea.w-select {
   border-radius: var(--0-5rem);
 }
 
-.image-4 {
+.betta-image-cards {
   object-fit: cover;
 }
 
@@ -7388,6 +7352,10 @@ textarea.w-select {
 .text-block-17 {
   font-size: 1.1rem;
   font-weight: 700;
+}
+
+.text-block-17.right {
+  text-align: right;
 }
 
 .div-block-49 {
@@ -8669,6 +8637,11 @@ textarea.w-select {
   min-height: 11.25rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.textblocklabelwhite {
+  color: var(--gray900);
+  font-weight: 600;
 }
 
 

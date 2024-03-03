@@ -25,7 +25,7 @@ export function ScrollCardHorizontallFull({
     >
       <_Builtin.Block className="div-block-38" tag="div">
         <_Builtin.Image
-          className="image-4"
+          className="betta-image-cards"
           loading="lazy"
           width="auto"
           height="auto"
@@ -66,10 +66,18 @@ export function ScrollCardHorizontallFull({
             {stars}
           </_Builtin.Block>
         </_Builtin.Block>
-        <_Builtin.Block className="text-block-13" tag="div" {...subtitleStyle}>
+        <_Builtin.Block
+          className="text-block-13 left"
+          tag="div"
+          {...subtitleStyle}
+        >
           {subTitle}
         </_Builtin.Block>
-        <_Builtin.Block className="text-block-12" tag="div" {...titleStyle}>
+        <_Builtin.Block
+          className="text-block-12 left"
+          tag="div"
+          {...titleStyle}
+        >
           {title}
         </_Builtin.Block>
       </_Builtin.Block>

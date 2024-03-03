@@ -12,7 +12,7 @@ export function ScrollCardHorizontall({
     <_Component className="scrollcardhorizontall" tag="div">
       <_Builtin.Block className="div-block-38" tag="div">
         <_Builtin.Image
-          className="image-4"
+          className="betta-image-cards"
           loading="lazy"
           width="auto"
           height="auto"
